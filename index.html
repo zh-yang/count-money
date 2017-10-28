@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 启动webapp功能，会删除默认的苹果工具栏和菜单栏 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no minimal-ui" />
+		<!-- 设置宽度为设备的宽度，默认不缩放，不允许用户缩放（即禁止缩放），在网页加载时隐藏地址栏与导航 -->
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<!--遮罩层-->
+		<div class="cover">
+			<!--遮罩层的关闭按钮-->
+			<div class="close"><img width="100%" src="img/x.png" /></div>
+			<!--数钱榜弹框-->
+			<div class="show" id="moneycount">
+				<img class="palce" width="37.5%" src="img/place.png" />
+				<ul>
+					<li><img class="num" src="img/1.png" /><img class="icon" src="img/icon.png" /><span class="name">五月天</span><span class="score">800分</span></li>
+					<li><img class="num" src="img/2.png" /><img class="icon" src="img/icon.png" /><span class="name">五月天</span><span class="score">700分</span></li>
+					<li><img class="num" src="img/3.png" /><img class="icon" src="img/icon.png" /><span class="name">五月天</span><span class="score">600分</span></li>
+					<li><span class="num">4</span><img class="icon" src="img/icon.png" /><span class="name">五月天</span><span class="score">500分</span></li>
+					<li><span class="num">5</span><img class="icon" src="img/icon.png" /><span class="name">五月天</span><span class="score">400分</span></li>
+				</ul>
+			</div>
+			<!--活动规则弹框-->
+			<div class="show" id="rule">
+				<h2>活动规则</h2>
+				<p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！<br /> 2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在正确的时间内提供手机号码造成的奖品损失，由用户自行承担。<br />3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。<br />4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。<br />5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。</p>
+			</div>
+			<!--活动奖品弹框-->
+			<div class="show" id="award">
+				<h2>活动奖品</h2>
+				<p>一等奖1人：价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+				<p> 二等奖20人：100元订房代金券每人1张,并可享康体项目4折优惠；</p>
+				<p>三等奖50人：50元订房代金券每人1张,并可享康体项目5折优惠；</p>
+				<p> 奖品的有效期：2016年5月20日至6月15日（周五、周六及法定节假日不可用</p>
+			</div>
+			<!--奖券使用说明弹框-->
+			<div class="show" id="explan">
+				<h2>奖券使用说明</h2>
+				<p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。<br />2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。<br />3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。<br />4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。<br />5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。</p>
+			</div>
+			<!--点击开始之后的弹窗-->
+			<div class="show" id="info">
+				<img class="place" width="92%" src="img/data.png" />
+				<div>个人信息将作为领奖依据</div>
+				<div>请认真填写喔</div>
+				<form action="#" method="post">
+					<input type="text" class="texts" placeholder="姓名" />
+					<input type="text" class="texts" placeholder="电话" />
+					<input type="button" id="sub" value="提交并开始游戏" />
+				</form>
+			</div>
+		</div>
+		<!--第一页-->
+		<div class="homePage">
+			<img width="100%" src="img/logo.png" />
+			<img width="48%" src="img/challenge.png" />
+			<img width="18.75%" src="img/challenge1.png" />
+			<img width="91.7%" src="img/speed.png" />
+			<img width="15%" src="img/win1.png" />
+			<img width="74.4%" src="img/win.png" />
+			<div class="button">
+				<div class="btn btn1"><img width="100%" src="img/moneycount.png" /></div>
+				<div class="btn btn1"><img width="100%" src="img/rule.png" /></div>
+				<div class="btn btn1"><img width="100%" src="img/award.png" /></div>
+				<div class="btn btn1"><img width="100%" src="img/explan.png" /></div>
+			</div>
+			<!--开始按钮需放在最后，保证第三页的弹框和按钮对应-->
+			<img class="btn1 btn11" width="34%" src="img/start.png" />
+			<div id="stage"><img width="100%" src="img/hand.png" /></div>
+		</div>
+		<!--第二页-->
+		<div class="slide">
+			<img width="100%" src="img/logo2.png" />
+			<div id="play">
+				<img src="img/play.png"/>
+			</div>
+			<ul id="score">
+				<li>0</li>
+				<li id="mar">0</li>
+				<li>0</li>
+			</ul>
+			<div id="clock">5</div>
+			<img class="money" width="56.88%" src="img/100.png" />
+			<img class="money" width="56.88%" src="img/100.png" />
+			<img class="money" width="56.88%" src="img/100.png" />
+			<img class="money" width="56.88%" src="img/100.png" />
+			<img class="money" width="56.88%" src="img/100.png" />
+			<img id="brick" width="100%" src="img/brick.png" />
+			<div id="hand"><img width="100%" src="img/hand2.png" /></div>
+		</div>
+		<!--第三页-->
+		<div class="share">
+			<img width="100%" src="img/logo.png" />
+			<div class="lstscore">￥888</div>
+			<div class="ran"></div>
+			<div class="scrpla">我的辉煌战绩:￥<span>999</span>  当前排名：<span>62</span>位</div>
+			<img class="onceagain" width="28.3%" src="img/onceagain.png"/>
+			<img class="sharbt" width="28.3%" src="img/sharbt.png"/>
+			<div class="button">
+				<div class="btn btn3"><img width="100%" src="img/moneycount.png" /></div>
+				<div class="btn btn3"><img width="100%" src="img/rule.png" /></div>
+				<div class="btn btn3"><img width="100%" src="img/award.png" /></div>
+				<div class="btn btn3"><img width="100%" src="img/explan.png" /></div>
+			</div>
+		</div>
+		<div class="shacover"></div>
+	</body>
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>

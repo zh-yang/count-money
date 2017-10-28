@@ -1,0 +1,469 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*屏幕适配*/
+
+@media screen and (min-width:640px) {
+	.cover {
+		width: 640px;
+		height: 1136px;
+	}
+	.homePage {
+		width: 640px;
+		height: 1136px;
+	}
+	.share {
+		width: 640px;
+		height: 1136px;
+	}
+	.shacover {
+		width: 640px;
+		height: 1136px;
+	}
+	.slide {
+		width: 640px;
+		height: 1136px;
+	}
+}
+
+@media screen and (max-width:640px) and (min-width:320px) {
+	.cover {
+		width: 100vw;
+		height: 100vh;
+		font-size: 14px;
+	}
+	.homePage {
+		/*记住*/
+		width: 100vw;
+		height: 100vh;
+		font-size: 14px;
+	}
+	.share {
+		width: 100vw;
+		height: 100vh;
+		font-size: 14px;
+	}
+	.slide {
+		width: 100vw;
+		height: 100vh;
+		font-size: 14px;
+	}
+	.shacover {
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.cover {
+		width: 100vw;
+		height: 100vh;
+		font-size: 12px;
+	}
+	.homePage {
+		width: 100vw;
+		height: 100vh;
+		font-size: 12px;
+	}
+	.share {
+		width: 100vw;
+		height: 100vh;
+		font-size: 12px;
+	}
+	.slide {
+		width: 100vw;
+		height: 100vh;
+		font-size: 12px;
+	}
+	.shacover {
+		width: 100vw;
+		height: 100vh;
+	}
+}
+/*第一页样式*/
+.homePage {
+	background: url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	z-index: 0;
+	perspective: 800px;
+	/*display: none;*/
+}
+.cover {
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.homePage img:nth-child(2) {
+	position: absolute;
+	left: 21%;
+	top: 12.5%;
+	animation: le 2s;
+}
+
+.homePage img:nth-child(3) {
+	position: absolute;
+	left: 73%;
+	top: 14.5%;
+	animation: le 2s;
+}
+
+.homePage img:nth-child(4) {
+	position: absolute;
+	left: 2.5%;
+	top: 25.7%;
+	animation: ri 2s;
+}
+
+@keyframes ri {
+	from {
+		left: 100%;
+	}
+}
+
+.homePage img:nth-child(5) {
+	position: absolute;
+	top: 35.2%;
+	animation: le 2s;
+}
+
+.homePage img:nth-child(6) {
+	position: absolute;
+	left: 14.8%;
+	top: 34.5%;
+	animation: le 2s;
+}
+
+@keyframes le {
+	from {
+		left: -80%;
+	}
+}
+
+.btn11 {
+	position: absolute;
+	left: 33%;
+	top: 60%;
+}
+
+#stage {
+	width: 13.75%;
+	position: absolute;
+	left: 58%;
+	top: 69%;
+	transform-style: preserve-3d;
+}
+
+#stage img {
+	animation: hands 1s infinite alternate;
+	position: absolute;
+}
+
+@keyframes hands {
+	from {
+		transform: translateZ(80px);
+	}
+}
+
+.button {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 5.6%;
+	width: 90.6%;
+	height: 10.03%;
+	background: url(../img/buttonbg.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.button div {
+	/*margin-top的百分比是根据宽度的*/
+	margin-top: 2%;
+	float: left;
+	margin-left: 2.56%;
+	width: 22.2%;
+	height: 77.8%;
+}
+
+.show {
+	position: absolute;
+	top: 20%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 73%;
+	max-height: 60%;
+	overflow: scroll;
+	background-color: #ffead1;
+	box-sizing: border-box;
+	padding: 0 2%;
+	border-radius: 20px;
+	border: 2px red solid;
+	display: none;
+}
+
+.close {
+	position: absolute;
+	right: 13%;
+	top: 17%;
+	width: 5%;
+}
+
+.show h2 {
+	text-align: center;
+	margin: 3%;
+}
+
+.show p {
+	margin: 3% 0;
+}
+
+#moneycount {
+	display: none;
+	height: 56%;
+}
+
+.palce {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+}
+
+#moneycount ul {
+	width: 95%;
+	position: absolute;
+	top: 12%;
+	height: 79%;
+	list-style-type: none;
+}
+
+#moneycount li {
+	position: relative;
+	height: 20%;
+	border-bottom: 1px dashed gray;
+}
+
+#moneycount li .icon {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 16%;
+	border-radius: 50%;
+}
+
+#moneycount li .num {
+	width: 5%;
+	position: absolute;
+	left: 0;
+	top: 35%;
+}
+
+#moneycount li .name {
+	position: absolute;
+	left: 30%;
+	top: 35%;
+}
+
+#moneycount li .score {
+	position: absolute;
+	right: 20%;
+	top: 35%;
+}
+
+#info {
+	height: 55%;
+}
+
+#info form {
+	height: 60%;
+}
+
+#info div {
+	text-align: center;
+}
+
+#info .texts {
+	display: block;
+	margin: 5% auto;
+	font-size: 1.2em;
+	text-indent: 5%;
+	background-color: #f2bb00;
+	border-radius: 10px;
+	border: 2px solid red;
+	height: 25%;
+}
+
+#info #sub {
+	display: block;
+	margin: 0 auto;
+	background-color: red;
+	color: white;
+	font-size: 1.5em;
+	border-radius: 20px;
+	padding: 5%;
+	border: none;
+}
+
+
+/*第二页样式*/
+
+.slide {
+	background: url(../img/slidebg.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	overflow: hidden;
+	display: none;
+}
+
+#score{
+	list-style-type: none;
+	position: absolute;
+	top: 32.6%;
+	left: 21.8%;
+	width: 40%;
+	height: 9.2%;
+	padding: 4.3% 0;
+	box-sizing: border-box;
+}
+#score li{
+	float: left;
+	display: table-cell;
+	vertical-align: middle;
+	width: 28.5%;
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+}
+#mar{
+	margin: auto 7%;
+}
+#clock{
+	color: #aa8253;
+	font-size: 1.2em;
+	position: absolute;
+	top: 36%;
+	left: 72%;
+}
+.money{
+	position: absolute;
+	top: 59.4%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+#brick{
+	position: absolute;
+	bottom: 0;
+}
+#hand {
+	position: absolute;
+	width: 36%;
+	top: 60%;
+	left: 61%;
+	animation: hands2 0.8s infinite alternate;
+}
+
+@keyframes hands2 {
+	to {
+		top: 48%;
+		left: 61%;
+	}
+}
+#play{
+	position: absolute;
+	top: 12.85%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 82%;
+	height: 15.2%;
+	overflow: hidden;
+}
+#play img{
+	position: absolute;
+	width: 92.5%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	animation: play 10s infinite;
+}
+@keyframes play{
+	0{
+		top: 0;
+	}
+	15%{
+		top: 0;
+	}
+	18.3%{
+		top:-100% ;
+	}
+	48.3%{
+		top: -100%;
+	}
+	51.6%{
+		top: -200%;
+	}
+	81.6%{
+		top: -200%;
+	}
+	84.9%{
+		top: -300%;
+	}
+	100%{
+		-300%;
+	}
+}
+/*第三页样式*/
+.share {
+	background: url(../img/sharebg.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	z-index: 0;
+	display: none;
+}
+.onceagain{
+	position: absolute;
+	left: 16%;
+	top: 56%;
+}
+.sharbt{
+	position: absolute;
+	top: 56%;
+	right: 16%;
+}
+.lstscore{
+	position: absolute;
+	font-size: 2.8em;
+	top: 20%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+.ran{
+	position: absolute;
+	top: 32%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+.scrpla{
+	color: red;
+	position: absolute;
+	top: 37.5%;
+	width: 100%;
+	text-align: center;
+}
+.shacover {
+	background: url(../img/share.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+
